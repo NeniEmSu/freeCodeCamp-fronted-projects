@@ -10,7 +10,7 @@
     <style>
         .fade-enter-active,
         .fade-leave-active {
-            transition: opacity 5s;
+            transition: opacity .5s;
         }
 
         .fade-enter,
@@ -33,11 +33,14 @@
 
                     <div class="text-center">
                         <transition name="fade" mode="out-in">
-                            <q id="text">{{ currentQuote }}</q>
+                            <b v-if="loading">Loading...</b>
+                            <q v-else id="text">{{ currentQuote.quoteText }}</q>
                         </transition>
                     </div>
                     <div class="text-right">
-                        <em id="author">{{ name }}</em>
+                        <em v-if="currentQuote.quoteAuthor" id="author">{{ currentQuote.quoteAuthor }}</em>
+                        <em v-else id="author">Anonymous!</em>
+
                     </div>
 
                 </div>
@@ -46,10 +49,10 @@
                     <div class="row action-btns">
                         <div class="col-6">
                             <button id="new-quote" type="button" class="btn btn-primary btn-block"
-                                @click="newQuote()">Random Quote</button>
+                                @click="getRandomQuote()">Random Quote</button>
                         </div>
                         <div class="col-6">
-                            <a :href='`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text="${currentQuote}"%20\n${name}`'
+                            <a :href='`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text="${currentQuote.quoteText}"%20\n${currentQuote.quoteAuthor}`'
                                 target="_blank" id="tweet-quote" type="button" class="btn btn-secondary btn-block">Tweet
                                 Quote
                             </a>
@@ -61,7 +64,7 @@
         </section>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="quotes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
 
