@@ -17,7 +17,7 @@
                 
                 <div id="quote" class="card-body">
                     <q id="text">This is a quote.</q>
-                    <em id="author">Neni Emsu</em>
+                    <em id="author">{{ name }}</em>
                 </div>
             
             
@@ -35,5 +35,14 @@
         </div>
         </section>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                name: 'Neni EmSu!'
+            }
+        })
+    </script>
 </body>
 </html>
