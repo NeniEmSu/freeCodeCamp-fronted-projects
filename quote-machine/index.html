@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Random Quote Machine!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-<body>
-    
+<body class="container">
+    <section id="app">
+        <h1 class="my-5">Random Quote Machine!</h1>
+        <section id="quote-box">
+            <div class="card">
+                <div class="card-title">
+                    <h3 class="text-primary text-center">Quote</h3>
+                </div>
+                
+                <div id="quote" class="card-body">
+                    <q id="text">This is a quote.</q>
+                    <em id="author">Neni Emsu</em>
+                </div>
+            
+            
+                <div class="card-footer">
+                    <div class="row action-btns">
+                                    <div class="col-6">
+                        <button id="new-quote" type="button" class="btn btn-primary btn-block">Random Quote</button>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://twitter.com/intent/tweet" id="tweet-quote" type="button" class="btn btn-secondary btn-block">Tweet Quote</a>
+                    </div>
+
+                    </div>
+                </div>
+        </div>
+        </section>
+    </section>
 </body>
 </html>
