@@ -16,15 +16,15 @@
                 </div>
                 
                 <div id="quote" class="card-body">
-                    <q id="text">This is a quote.</q>
+                    <q id="text">{{ currentQuote }}</q>
                     <em id="author">{{ name }}</em>
                 </div>
             
             
                 <div class="card-footer">
                     <div class="row action-btns">
-                                    <div class="col-6">
-                        <button id="new-quote" type="button" class="btn btn-primary btn-block">Random Quote</button>
+                    <div class="col-6">
+                        <button id="new-quote" type="button" class="btn btn-primary btn-block" @click="newQuote()">Random Quote</button>
                     </div>
                     <div class="col-6">
                         <a href="https://twitter.com/intent/tweet" id="tweet-quote" type="button" class="btn btn-secondary btn-block">Tweet Quote</a>
@@ -36,11 +36,20 @@
         </section>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="quotes.js"></script>
     <script>
+        const quoteIndex = Math.floor(Math.random() * quotes.length-1)
         new Vue({
             el: '#app',
             data: {
-                name: 'Neni EmSu!'
+                name: 'Neni EmSu!',
+                quotes,
+                currentQuote: quotes[quoteIndex]
+            },
+            methods: {
+                newQuote: function () {
+                    this. currentQuote = quotes[Math.floor(Math.random() * quotes.length-1)]
+                }
             }
         })
     </script>
