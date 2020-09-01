@@ -1,57 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Quote Machine!</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
+
 <body class="container">
     <section id="app">
         <h1 class="my-5">Random Quote Machine!</h1>
         <section id="quote-box">
             <div class="card">
                 <div class="card-title">
-                    <h3 class="text-primary text-center">Quote</h3>
+                    <h4 class="text-primary text-center">Quote</h4>
                 </div>
-                
+
                 <div id="quote" class="card-body">
-                    <q id="text">{{ currentQuote }}</q>
-                    <em id="author">{{ name }}</em>
+                    <div class="text-center">
+                        <q id="text">{{ currentQuote }}</q>
+                    </div>
+                    <div class="text-right">
+                        <em id="author">{{ name }}</em>
+                    </div>
+
+
                 </div>
-            
-            
+
+
                 <div class="card-footer">
                     <div class="row action-btns">
-                    <div class="col-6">
-                        <button id="new-quote" type="button" class="btn btn-primary btn-block" @click="newQuote()">Random Quote</button>
-                    </div>
-                    <div class="col-6">
-                        <a href="https://twitter.com/intent/tweet" id="tweet-quote" type="button" class="btn btn-secondary btn-block">Tweet Quote</a>
-                    </div>
+                        <div class="col-6">
+                            <button id="new-quote" type="button" class="btn btn-primary btn-block"
+                                @click="newQuote()">Random Quote</button>
+                        </div>
+                        <div class="col-6">
+                            <a href="https://twitter.com/intent/tweet" id="tweet-quote" type="button"
+                                class="btn btn-secondary btn-block">Tweet Quote</a>
+                        </div>
 
                     </div>
                 </div>
-        </div>
+            </div>
         </section>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="quotes.js"></script>
-    <script>
-        const quoteIndex = Math.floor(Math.random() * quotes.length-1)
-        new Vue({
-            el: '#app',
-            data: {
-                name: 'Neni EmSu!',
-                quotes,
-                currentQuote: quotes[quoteIndex]
-            },
-            methods: {
-                newQuote: function () {
-                    this. currentQuote = quotes[Math.floor(Math.random() * quotes.length-1)]
-                }
-            }
-        })
-    </script>
+    <script src="index.js"></script>
 </body>
+
 </html>
