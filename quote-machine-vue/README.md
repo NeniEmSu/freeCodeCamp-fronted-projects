@@ -1,4 +1,4 @@
-# Random Quote Machine
+# Random Quote Machine vue.js
 
 This is build with HTML, CSS, and Vue.js via CDN imports. Bootstrap also provides some styling assistance.
 
