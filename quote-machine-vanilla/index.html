@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Machine Vanilla js!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+
+<body class="container">
+    <section id="app">
+        <h1 class="my-5">Random Quote Machine Vanilla js!</h1>
+        <section id="quote-box">
+            <div class="card">
+                <div class="card-title">
+                    <h4 class="text-primary text-center">Quote</h4>
+                </div>
+
+                <div id="quote" class="card-body">
+
+                    <div class="text-center">
+                            <q id="text">Quote goes here from js.</q>
+                    </div>
+                    <div class="text-right">
+                        <em id="author">Anonymous!</em>
+                    </div>
+
+                </div>
+
+                <div class="card-footer">
+                    <div class="row action-btns">
+                        <div class="col-6">
+                            <button id="new-quote" type="button" class="btn btn-primary btn-block">Random Quote</button>
+                        </div>
+                        <div class="col-6">
+                            <a id="tweet-quote" :href='`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=quote-goes-here%20\nauthors-name-goes-here`'
+                                target="_blank"  type="button" class="btn btn-secondary btn-block">Tweet
+                                Quote
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <script src="index.js"></script>
+    <script src="quotes.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>
