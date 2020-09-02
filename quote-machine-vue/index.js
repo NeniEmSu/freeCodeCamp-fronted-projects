@@ -13,7 +13,7 @@ new Vue({
   methods: {
     getRandomQuote: function () {
       this.currentQuote = this.quotes[
-        Math.floor(Math.random() * this.quotes.length - 1)
+        Math.floor((Math.random() * this.quotes.length - 1) + 1)
       ];
     },
     getQuotes: function () {
