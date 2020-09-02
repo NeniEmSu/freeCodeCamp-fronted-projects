@@ -1,6 +1,6 @@
-# Freecodecamp Projects Vue
+# Freecodecamp Frontend Libraries Projects
 
-Building all the freeCodeCamp projects in Vue.js.
+Building all the freeCodeCamp projects in Vanilla js, Vue.js and React js.
 
 ## Projects
 
@@ -9,4 +9,3 @@ Building all the freeCodeCamp projects in Vue.js.
 * [Drum Machine](drum-machine/README.md)
 * [Calculator](calculator/README.md)
 * [Pomodoro Clock](pomodoro-clock/README.md)
-
